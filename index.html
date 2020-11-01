@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles\css\main.css">
     <link rel="stylesheet" href="styles\css\animations.css">
     <link rel="stylesheet" href="styles\css\utilities.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
 
     <script src="https://kit.fontawesome.com/8caa51fd8b.js" crossorigin="anonymous"></script>
 
@@ -38,7 +39,7 @@
             <nav class="header__user">
                 <ul class="header__list">
                     <li class="header__list-item">
-                        Login / Register
+                        <span>Login / Register</span>
                         <img src="assets\icons\account.svg" alt="login or register">
                     </li>
                     <li class="header__list-item">
@@ -49,18 +50,27 @@
         </div>
 
         <div class="header__bottom">
-            <div class="header__logo">
-
+            <div class="menu__left">
+                <div class="header__logo">
+                    <img src="assets\icons\Logo.svg" alt="the london lens company">
+                </div>
             </div>
-            <nav class="header__menu">
-                <ul class="header__list">
-                    <li class="header__list-item"></li>
-                    <li class="header__list-item"></li>
-                    <li class="header__list-item"></li>
-                    <li class="header__list-item"></li>
-                    <li class="header__list-item"></li>    
-                </ul>
-            </nav>
+            <div class="menu__right">
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <p>Contact Lenses</p>
+                        </li>
+                        <li class="header__list-item"></li>
+                        <li class="header__list-item"></li>
+                        <li class="header__list-item"></li>
+                        <li class="header__list-item"></li>    
+                    </ul>
+                </nav>
+                <form class="header__search" action="">
+                    <input type="text" placeholder="Search" name="Search" id="search">
+                </form>
+            </div>
         </div>
     </header>
     

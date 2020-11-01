@@ -1,11 +1,13 @@
 // VARIABLES
 
 // Colours
-@blue-dark: #151F2A;
-@gold: #EFC25D;
-@grey-dark: #2B2835;
-@grey-mid: #6A6A6A;
-@grey-light: #F5F5F5;
+@blue-dark: #151F2Aff;
+@gold: #EFC25Dff;
+@grey-dark: #2B2835ff;
+@grey-mid: #6A6A6Aff;
+@grey-light: #F5F5F5ff;
+@white: #ffffffff;
+@transparent: #00000000;
 
 // Breakpoints
 @max-width-xs: 375px;
@@ -19,32 +21,121 @@
 @min-width-l: @max-width-m + 1;
 @min-width-xl: @max-width-l + 1;
 
+// Fonts
+@font-main: 'Open Sans', sans-serif;
+@font-footer: 'Montserrat', sans-serif;
+
+h1 {
+    font-size: 46px;
+    line-height: 46px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 55px;    
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 55px;    
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32.68px;    
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 21.79px;    
+}
+
+p {
+    font-size: 14px;
+    line-height: 19.62px;    
+}
+
 // Values
-@header-height-l: 4em;
+@header-top: 28px;
+@header-bottom: 70px;
+@header-height-l: @header-top + @header-bottom;
 @header-height-s: 2em;
+@padding-h: 60px;
+
+
+// BASE STYLES
+
+body {
+    font-family: @font-main;
+    font-size: 12px;
+    color: @white;
+    line-height: 16.34px;
+
+}
+
+.button {
+    font-family: @font-main;
+    color: @white;
+    background-color: @transparent;
+    padding: 10px 15px;
+    border: @white 2px solid;
+    border-radius: 20px;
+}
+
+input {
+    .button();
+
+    &:focus {
+        outline: none;
+    }
+}
 
 
 // STYLES
 
 .header {
-    &__top {
+    position: fixed;
+    width: 100%;
+    height: @header-height-l;
+
+    &__top, &__bottom {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: @header-top;
         background-color: @grey-light;
+        box-sizing: border-box;
+        padding: 0 @padding-h;
     }
     
     &__bottom {
-        display: flex;
-        justify-content: space-between;
+        height: @header-bottom;
         background-color: @blue-dark;
+    }
+
+    &__menu, &__search {
+        display: inline-block;
     }
 
     &__list {
 
         &-item {
             display: inline-block;
+            font-weight: 600;
             color: @grey-mid;
             padding: 0 15px;
+
+            p {
+                color: @white;
+            }
+
+            span {
+                padding: 0 5px;
+            }
+        }
+
+        img {
+            color: @grey-mid;
         }
     }
 
@@ -53,4 +144,9 @@
             padding: 0 2px;
         }
     }
+}
+
+.main {
+    background-color: @white;
+    padding: @header-height-l @padding-h 0;
 }
