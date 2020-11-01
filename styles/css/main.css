@@ -1,0 +1,18 @@
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+}
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: #151F2A;
+}
+.header__list-item {
+  display: inline-block;
+  color: #6A6A6A;
+  padding: 0 15px;
+}
+.header__socials .header__list-item {
+  padding: 0 2px;
+}
